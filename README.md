@@ -1,1 +1,1 @@
-# COMP-3607-Group 
+# COMP-3607-Group Project
