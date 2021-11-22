@@ -1,6 +1,6 @@
 # COMP-3607-Group 14 Repository
 ## Group Members
-- Deepak R
+- Deepak Ramsubhag
 - Jiles Ramjattan
 - Kershawn Edwards
-- Branndon Mohhammed
+- Brandon Mohhammed
