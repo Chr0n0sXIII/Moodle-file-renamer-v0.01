@@ -2,6 +2,12 @@ package comp3607_group_14;
 
 public class HardRenamingStrategy implements RenamingStrategy {
 
+    
+    /** 
+     * @param fileName
+     * @param student
+     * @return String
+     */
     public String renameFile(String fileName, StudentData student) {
         String newFileName = "";
         newFileName += student.getFullName() + "_";

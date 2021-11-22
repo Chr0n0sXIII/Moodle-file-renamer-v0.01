@@ -10,6 +10,10 @@ public class StudentDataCollection implements Aggregate {
         this.studentData = studentData;
     }
 
+    
+    /** 
+     * @return Iterator
+     */
     public Iterator createIterator() {
 
         Iterator iterator = new ListIterator();

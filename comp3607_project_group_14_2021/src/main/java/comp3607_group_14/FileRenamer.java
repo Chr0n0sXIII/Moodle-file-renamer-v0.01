@@ -21,6 +21,10 @@ public class FileRenamer {
         fileNameHandler = new FileNameHandler();
     }
 
+    
+    /** 
+     * @return int
+     */
     public int renameFiles() {
 
         int count = 0;
@@ -82,10 +86,21 @@ public class FileRenamer {
         return count;
     }
 
+    
+    /** 
+     * @param strategy
+     */
     private void setStrategy(RenamingStrategy strategy) {
         this.strategy = strategy;
     }
 
+    
+    /** 
+     * @param fileName
+     * @param student
+     * @param fileNameType
+     * @return String
+     */
     private String getNewFileName(String fileName, StudentData student, String fileNameType) {
 
         String newFileName = "";
@@ -101,6 +116,10 @@ public class FileRenamer {
         return newFileName;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getNumFlaggedFiles() {
         return numFlaggedFiles;
     }

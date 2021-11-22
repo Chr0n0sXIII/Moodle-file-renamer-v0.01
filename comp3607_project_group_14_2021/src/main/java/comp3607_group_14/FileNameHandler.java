@@ -4,6 +4,12 @@ import java.util.regex.Pattern;
 
 public class FileNameHandler {
 
+    
+    /** 
+     * @param fileName
+     * @param studentData
+     * @return boolean
+     */
     public boolean needsNameChange(String fileName, StudentData studentData) {
 
         String[] fileNameParts = fileName.split("_");
@@ -20,6 +26,12 @@ public class FileNameHandler {
         return false;
     }
 
+    
+    /** 
+     * @param fileName
+     * @param student
+     * @return boolean
+     */
     public boolean checkFileForFullName(String fileName, StudentData student) {
 
         String temp1 = fileName.trim().replaceAll(" ", "");
@@ -32,6 +44,12 @@ public class FileNameHandler {
         return nameCheck;
     }
 
+    
+    /** 
+     * @param fileName
+     * @param student
+     * @return String
+     */
     public String verifyFileNameType(String fileName, StudentData student) {
 
         if ((fileName.contains(student.getIdentifier())))

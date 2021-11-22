@@ -5,6 +5,11 @@ import java.util.ArrayList;
 
 public class FolderHandler {
 
+    
+    /** 
+     * @param location
+     * @return int
+     */
     public int numFilesInFolder(String location) {
 
         File directory = new File(location);
@@ -24,6 +29,11 @@ public class FolderHandler {
         }
     }
 
+    
+    /** 
+     * @param destination
+     * @return boolean
+     */
     public boolean createDestinationFolder(String destination) {
 
         File directory = new File(destination);
@@ -47,6 +57,11 @@ public class FolderHandler {
         }
     }
 
+    
+    /** 
+     * @param location
+     * @return ArrayList<String>
+     */
     public ArrayList<String> getFileNames(String location) {
 
         ArrayList<String> fileNames = new ArrayList<String>();
@@ -69,6 +84,11 @@ public class FolderHandler {
         return fileNames;
     }
 
+    
+    /** 
+     * @param location
+     * @return String
+     */
     public String getCSVName(String location) {
 
         File filepath = new File(location);
@@ -94,6 +114,11 @@ public class FolderHandler {
         return "Invalid Directory";
     }
 
+    
+    /** 
+     * @param location
+     * @return String
+     */
     public String getZippedFolderName(String location) {
 
         File filepath = new File(location);

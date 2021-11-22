@@ -31,6 +31,10 @@ public class FileCopier {
         };
     }
 
+    
+    /** 
+     * @throws IOException
+     */
     public void copyFiles() throws IOException {
         Path src = Paths.get(source);
         Path dest = Paths.get(destination);

@@ -17,6 +17,11 @@ public class StudentData {
         setData(line);
     }
 
+    
+    /** 
+     * @param line
+     * @return boolean
+     */
     private boolean setData(String line) {
 
         try {
@@ -46,42 +51,82 @@ public class StudentData {
         }
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getIdentifier() {
         return identifier;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getFullName() {
         return fullName;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getIDNumber() {
         return IDNumber;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getEmail() {
         return email;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getStatus() {
         return status;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getGrade() {
         return grade;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getMaxGrade() {
         return maxGrade;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getChangeGrade() {
         return changeGrade;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getDateLastModified() {
         return dateLastModified;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getFeedback() {
         return feedback;
     }

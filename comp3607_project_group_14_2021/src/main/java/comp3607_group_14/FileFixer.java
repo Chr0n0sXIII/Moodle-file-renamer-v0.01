@@ -6,6 +6,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileFixer {
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
 
         Path currentActiveDirectory = Paths.get("").toAbsolutePath();

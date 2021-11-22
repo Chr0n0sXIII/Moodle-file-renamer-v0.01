@@ -9,6 +9,12 @@ import java.util.zip.ZipInputStream;
 
 public class UnzipFiles {
 
+    
+    /** 
+     * @param zipFilePath
+     * @param destDir
+     * @return boolean
+     */
     public boolean unzip(String zipFilePath, String destDir) {
 
         try {
@@ -53,6 +59,13 @@ public class UnzipFiles {
         }
     }
 
+    
+    /** 
+     * @param destinationDir
+     * @param zipEntry
+     * @return File
+     * @throws IOException
+     */
     private File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
         File destFile = new File(destinationDir, zipEntry.getName());
 

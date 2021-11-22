@@ -18,6 +18,10 @@ public class CSVReader {
         studentData = new ArrayList<StudentData>();
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean readCSV() {
         String path = source + File.separator + CSVName;
         BufferedReader br;
@@ -41,6 +45,10 @@ public class CSVReader {
         return false;
     }
 
+    
+    /** 
+     * @return ArrayList<StudentData>
+     */
     public ArrayList<StudentData> getStudentData() {
         return studentData;
     }

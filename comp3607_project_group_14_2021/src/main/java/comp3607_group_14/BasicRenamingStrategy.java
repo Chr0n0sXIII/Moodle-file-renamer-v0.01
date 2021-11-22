@@ -2,6 +2,12 @@ package comp3607_group_14;
 
 public class BasicRenamingStrategy implements RenamingStrategy {
 
+    
+    /** 
+     * @param fileName
+     * @param student
+     * @return String
+     */
     public String renameFile(String fileName, StudentData student) {
         String newFileName = "";
         newFileName += student.getFullName() + "_";
@@ -13,6 +19,12 @@ public class BasicRenamingStrategy implements RenamingStrategy {
         return newFileName;
     }
 
+    
+    /** 
+     * @param fileName
+     * @param student
+     * @return String
+     */
     private String getOriginalSubmissionName(String fileName, StudentData student) {
 
         String fileNameParts[] = fileName.split("_");
