@@ -16,7 +16,7 @@ import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 
 @TestMethodOrder(OrderAnnotation.class)
-public class BasicCase1DataTest {
+public class MixedSampleTest {
 
     private String source;
     private FolderHandler folderHandler;
@@ -25,7 +25,7 @@ public class BasicCase1DataTest {
     public void initialize() {
         Path currentActiveDirectory = Paths.get("").toAbsolutePath();
         source = currentActiveDirectory.normalize().toString();
-        source += File.separator + "testingData" + File.separator + "basic case_i" + File.separator + "filesToRename";
+        source += File.separator + "testingData" + File.separator + "mixedSample" + File.separator + "filesToRename";
 
         folderHandler = new FolderHandler();
     }
@@ -47,7 +47,7 @@ public class BasicCase1DataTest {
     public void testUnzippingFolder() {
 
         String zipFolderName = folderHandler.getZippedFolderName(source);
-        assertEquals("sample3 case_i.zip", zipFolderName);
+        assertEquals("mixedSample.zip", zipFolderName);
 
         String zippedFolderPath = source + File.separator + zipFolderName;
         System.out.println(zippedFolderPath);
@@ -61,11 +61,11 @@ public class BasicCase1DataTest {
     @Order(3)
     public void testReadingCSV() {
 
-        String newSource = source + File.separator + "sample3 case_i";
+        String newSource = source + File.separator + "mixedSample";
 
         String CSVName = folderHandler.getCSVName(newSource);
 
-        assertEquals("Sample 3 CSV.csv", CSVName);
+        assertEquals("mixedSample CSV.csv", CSVName);
 
         CSVReader csvReader = new CSVReader(newSource, CSVName);
 
@@ -89,7 +89,7 @@ public class BasicCase1DataTest {
     @Order(5)
     public void testFileCopier() throws IOException {
 
-        String newSource = source + File.separator + "sample3 case_i";
+        String newSource = source + File.separator + "mixedSample";
         String destination = source + File.separator + "renamedFiles";
 
         FileCopier fileCopier = new FileCopier(newSource, destination);
@@ -105,10 +105,10 @@ public class BasicCase1DataTest {
     @Order(6)
     public void testFileRenamer() {
 
-        String newSource = source + File.separator + "sample3 case_i";
+        String newSource = source + File.separator + "mixedSample";
         String destination = source + File.separator + "renamedFiles";
 
-        CSVReader csvReader = new CSVReader(newSource, "Sample 3 CSV.csv");
+        CSVReader csvReader = new CSVReader(newSource, "mixedSample CSV.csv");
         csvReader.readCSV();
         ArrayList<String> originalFileNames = folderHandler.getFileNames(destination);
 
@@ -116,7 +116,7 @@ public class BasicCase1DataTest {
 
         int numRenamedFiles = fileRenamer.renameFiles();
 
-        assertEquals(49, numRenamedFiles);
+        assertEquals(34, numRenamedFiles);
 
         int numFlaggedFiles = fileRenamer.getNumFlaggedFiles();
 
@@ -126,10 +126,10 @@ public class BasicCase1DataTest {
     @Test
     @Order(7)
     public void testMissingSubmissions() {
-        String newSource = source + File.separator + "sample3 case_i";
+        String newSource = source + File.separator + "mixedSample";
         String destination = source + File.separator + "renamedFiles";
 
-        CSVReader csvReader = new CSVReader(newSource, "Sample 3 CSV.csv");
+        CSVReader csvReader = new CSVReader(newSource, "mixedSample CSV.csv");
         csvReader.readCSV();
         ArrayList<String> renamedFileNames = folderHandler.getFileNames(destination);
 

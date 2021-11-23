@@ -81,6 +81,10 @@ public class HardDataTest {
         assertTrue(folderHandler.createDestinationFolder(destination));
     }
 
+    
+    /** 
+     * @throws IOException
+     */
     @Test
     @Order(5)
     public void testFileCopier() throws IOException {
@@ -131,7 +135,8 @@ public class HardDataTest {
 
         MissingSubmissions ms = new MissingSubmissions(destination, csvReader.getStudentData(), renamedFileNames);
 
-        assertEquals(1, ms.writeToCSV());
-    }
+        int numMissingSubmissions = ms.writeToCSV();
 
+        assertEquals(1, numMissingSubmissions);
+    }
 }

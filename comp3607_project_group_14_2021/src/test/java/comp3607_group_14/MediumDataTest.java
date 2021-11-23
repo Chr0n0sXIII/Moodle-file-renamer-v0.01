@@ -81,6 +81,10 @@ public class MediumDataTest {
         assertTrue(folderHandler.createDestinationFolder(destination));
     }
 
+    
+    /** 
+     * @throws IOException
+     */
     @Test
     @Order(5)
     public void testFileCopier() throws IOException {
@@ -131,7 +135,9 @@ public class MediumDataTest {
 
         MissingSubmissions ms = new MissingSubmissions(destination, csvReader.getStudentData(), renamedFileNames);
 
-        assertEquals(0, ms.writeToCSV());
+        int numMissingSubmissions = ms.writeToCSV();
+
+        assertEquals(0, numMissingSubmissions);
     }
 
 }
