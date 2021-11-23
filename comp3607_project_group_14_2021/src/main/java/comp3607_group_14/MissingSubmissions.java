@@ -5,14 +5,35 @@ import java.util.ArrayList;
 import java.io.PrintWriter;
 import java.io.IOException;
 
+/**
+ * This class identifies students who did not submit an assignment
+ * @author Kershawn Edwards
+ * @author Deepak Ramsubhag
+ */
 public class MissingSubmissions {
-
+    /**
+     * This variable stores the file path of the renamed assignment files
+     */
     private String destination;
+    /**
+     * This variable stores dtudent information
+     */
     private StudentDataCollection studentDataCollection;
+    /**
+     * This variable stores an iterable object containing student information
+     */
     private Iterator iterator;
+    /**
+     * This variale stores the file names of files in a directory
+     */
     private ArrayList<String> fileNames;
+    /**
+     * This variable stores the count of the number of students that did not submit an assignment
+     */
     private int numMissingSubmissions = 0;
-
+    /**
+     * This constructor instantiates a MissingSubmissions class
+     */
     public MissingSubmissions(String destination, ArrayList<StudentData> studentData, ArrayList<String> fileNames) {
         this.destination = destination;
         this.studentDataCollection = new StudentDataCollection(studentData);
@@ -21,6 +42,7 @@ public class MissingSubmissions {
     }
 
     /**
+     * This function creates a csv string containing the student information of students who's file have not been identiied in the destination file path
      * @return String
      */
     private String findMissingFiles() {
@@ -58,6 +80,7 @@ public class MissingSubmissions {
     }
 
     /**
+     * This fucntion creates a csv file containing the information of students whose ssignmen was not identified in the destination file path
      * @return int
      */
     public int writeToCSV() {

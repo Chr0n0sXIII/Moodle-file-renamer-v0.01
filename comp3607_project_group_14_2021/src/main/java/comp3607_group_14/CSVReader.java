@@ -47,7 +47,7 @@ public class CSVReader {
 
     
     /** 
-     * @return ArrayList<StudentData>
+     * @return ArrayList
      */
     public ArrayList<StudentData> getStudentData() {
         return studentData;
