@@ -20,8 +20,7 @@ public class MissingSubmissions {
         this.iterator = studentDataCollection.createIterator();
     }
 
-    
-    /** 
+    /**
      * @return String
      */
     private String findMissingFiles() {
@@ -58,8 +57,7 @@ public class MissingSubmissions {
         return builder.toString();
     }
 
-    
-    /** 
+    /**
      * @return int
      */
     public int writeToCSV() {

@@ -5,8 +5,7 @@ import java.util.ArrayList;
 
 public class FolderHandler {
 
-    
-    /** 
+    /**
      * @param location
      * @return int
      */
@@ -17,7 +16,6 @@ public class FolderHandler {
         if (directory.isDirectory()) {
             String[] files = directory.list();
             if (files.length > 0) {
-                System.out.println(location + " is not empty.\n");
                 return files.length;
             } else {
                 System.out.println(location + " is empty.\n");
@@ -29,8 +27,7 @@ public class FolderHandler {
         }
     }
 
-    
-    /** 
+    /**
      * @param destination
      * @return boolean
      */
@@ -57,8 +54,7 @@ public class FolderHandler {
         }
     }
 
-    
-    /** 
+    /**
      * @param location
      * @return ArrayList<String>
      */
@@ -84,8 +80,7 @@ public class FolderHandler {
         return fileNames;
     }
 
-    
-    /** 
+    /**
      * @param location
      * @return String
      */
@@ -114,8 +109,7 @@ public class FolderHandler {
         return "Invalid Directory";
     }
 
-    
-    /** 
+    /**
      * @param location
      * @return String
      */

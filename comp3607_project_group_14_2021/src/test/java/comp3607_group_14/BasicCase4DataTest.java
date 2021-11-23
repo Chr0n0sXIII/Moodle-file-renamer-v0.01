@@ -32,7 +32,7 @@ public class BasicCase4DataTest {
 
     @Test
     @Order(1)
-    public void testNumFilesInDestinationFolder() {
+    public void testNumFilesInSourceFolder() {
 
         boolean greaterThanZero = false;
 
@@ -81,8 +81,7 @@ public class BasicCase4DataTest {
         assertTrue(folderHandler.createDestinationFolder(destination));
     }
 
-    
-    /** 
+    /**
      * @throws IOException
      */
     @Test

@@ -6,8 +6,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileFixer {
-    
-    /** 
+
+    /**
      * @param args
      * @throws Exception
      */
@@ -21,8 +21,6 @@ public class FileFixer {
 
         String destination = source + File.separator + "renamedFiles";
 
-        System.out.println(currentActiveDirectory.getFileName());
-
         FolderHandler folderHandler = new FolderHandler();
 
         if (folderHandler.numFilesInFolder(source) <= 0) {
@@ -31,6 +29,7 @@ public class FileFixer {
         }
 
         else {
+            System.out.println(source + " is not empty.\n");
 
             String zipFoldername = folderHandler.getZippedFolderName(source);
 
@@ -57,7 +56,7 @@ public class FileFixer {
             }
 
             String CSVName = folderHandler.getCSVName(source);
-            System.out.println(CSVName + " found.");
+            System.out.println(CSVName + " found.\n");
 
             if (CSVName.equals("No CSVs") || CSVName.equals("Multiple CSVs") || CSVName.equals("Invalid Directory")) {
                 System.out.println("\nExiting. . .\n");

@@ -32,7 +32,7 @@ public class MediumDataTest {
 
     @Test
     @Order(1)
-    public void testNumFilesInDestinationFolder() {
+    public void testNumFilesInSourceFolder() {
 
         boolean greaterThanZero = false;
 
@@ -81,8 +81,7 @@ public class MediumDataTest {
         assertTrue(folderHandler.createDestinationFolder(destination));
     }
 
-    
-    /** 
+    /**
      * @throws IOException
      */
     @Test

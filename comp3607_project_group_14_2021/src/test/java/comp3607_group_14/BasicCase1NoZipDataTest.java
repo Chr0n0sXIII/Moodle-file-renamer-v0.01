@@ -35,7 +35,7 @@ public class BasicCase1NoZipDataTest {
 
     @Test
     @Order(1)
-    public void testNumFilesInDestinationFolder() {
+    public void testNumFilesInSourceFolder() {
 
         boolean greaterThanZero = false;
 
@@ -74,8 +74,7 @@ public class BasicCase1NoZipDataTest {
         assertTrue(folderHandler.createDestinationFolder(destination));
     }
 
-    
-    /** 
+    /**
      * @throws IOException
      */
     @Test
