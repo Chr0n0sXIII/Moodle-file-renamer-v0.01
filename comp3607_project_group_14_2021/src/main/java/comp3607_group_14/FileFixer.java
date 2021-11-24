@@ -5,9 +5,14 @@ import java.util.ArrayList;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * This is the main class of this project
+ */
 public class FileFixer {
 
     /**
+     * This method is responsible for running the program
+     * 
      * @param args
      * @throws Exception
      */

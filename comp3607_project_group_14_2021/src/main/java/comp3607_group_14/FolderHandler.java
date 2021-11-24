@@ -3,9 +3,14 @@ package comp3607_group_14;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * This class provides functionality on folders
+ */
 public class FolderHandler {
 
     /**
+     * This method returns the number of files in folder
+     * 
      * @param location
      * @return int
      */
@@ -28,6 +33,8 @@ public class FolderHandler {
     }
 
     /**
+     * This method creates the destination folder to be used
+     * 
      * @param destination
      * @return boolean
      */
@@ -55,6 +62,8 @@ public class FolderHandler {
     }
 
     /**
+     * This method gets all the names of files in a folder
+     * 
      * @param location
      * @return ArrayList
      */
@@ -81,6 +90,8 @@ public class FolderHandler {
     }
 
     /**
+     * This method gets the name of a CSV file in a folder
+     * 
      * @param location
      * @return String
      */
@@ -110,6 +121,8 @@ public class FolderHandler {
     }
 
     /**
+     * This method gets the name of a zipped file in a folder
+     * 
      * @param location
      * @return String
      */

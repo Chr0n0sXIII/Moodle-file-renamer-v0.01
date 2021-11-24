@@ -1,9 +1,14 @@
 package comp3607_group_14;
 
+/**
+ * This class is used to rename a filename if it is of a basic format
+ */
 public class BasicRenamingStrategy implements RenamingStrategy {
 
-    
-    /** 
+    /**
+     * This method returns the new name of a file given a filename its corresponding
+     * student
+     * 
      * @param fileName
      * @param student
      * @return String
@@ -19,8 +24,9 @@ public class BasicRenamingStrategy implements RenamingStrategy {
         return newFileName;
     }
 
-    
-    /** 
+    /**
+     * This method returns the original submission name of a file of a basic format
+     * 
      * @param fileName
      * @param student
      * @return String

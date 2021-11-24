@@ -1,9 +1,14 @@
 package comp3607_group_14;
 
+/**
+ * This class is used to rename a filename if it is of a hard format
+ */
 public class HardRenamingStrategy implements RenamingStrategy {
 
-    
-    /** 
+    /**
+     * This method returns the new name of a file given a filename its corresponding
+     * student
+     * 
      * @param fileName
      * @param student
      * @return String

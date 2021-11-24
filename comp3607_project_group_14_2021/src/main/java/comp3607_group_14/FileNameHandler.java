@@ -2,10 +2,14 @@ package comp3607_group_14;
 
 import java.util.regex.Pattern;
 
+/**
+ * This class provides functionality on the renaming of files
+ */
 public class FileNameHandler {
 
-    
-    /** 
+    /**
+     * This method checks if a file needs renaming
+     * 
      * @param fileName
      * @param studentData
      * @return boolean
@@ -26,8 +30,9 @@ public class FileNameHandler {
         return false;
     }
 
-    
-    /** 
+    /**
+     * This method checks a file's name for the full name of a student
+     * 
      * @param fileName
      * @param student
      * @return boolean
@@ -44,8 +49,9 @@ public class FileNameHandler {
         return nameCheck;
     }
 
-    
-    /** 
+    /**
+     * This method verifies the file name format
+     * 
      * @param fileName
      * @param student
      * @return String

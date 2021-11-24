@@ -7,10 +7,14 @@ import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+/**
+ * This class is responsible for unzipping zipped folders
+ */
 public class UnzipFiles {
 
-    
-    /** 
+    /**
+     * This method unzips the zipped folder given a zipped folder's path and the
+     * destination
      * 
      * @param zipFilePath
      * @param destDir
@@ -60,8 +64,9 @@ public class UnzipFiles {
         }
     }
 
-    
-    /** 
+    /**
+     * This function creates a new File object
+     * 
      * @param destinationDir
      * @param zipEntry
      * @return File

@@ -3,16 +3,51 @@ package comp3607_group_14;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * This class
+ */
 public class FileRenamer {
 
+    /**
+     * This variable stores the file path of the renamed assignment files
+     */
     private String destination;
+
+    /**
+     * This variable stores a collection of student data
+     */
     private StudentDataCollection studentDataCollection;
+
+    /**
+     * This variable stores an object which is used to traverse the collection of
+     * studentData
+     */
     private Iterator iterator;
+
+    /**
+     * This variable stores an arraylist of studentData
+     */
     private ArrayList<String> fileNames;
+
+    /**
+     * This variable stores the strategy that is used to rename files
+     */
     private RenamingStrategy strategy;
+
+    /**
+     * This variable stores an object which is used to provide functionality for
+     * renaming files
+     */
     private FileNameHandler fileNameHandler;
+
+    /**
+     * This variable stores the number of flagged files
+     */
     private int numFlaggedFiles = 0;
 
+    /**
+     * This method instantiates a FileRenamer object
+     */
     public FileRenamer(String destination, ArrayList<StudentData> studentData, ArrayList<String> fileNames) {
         studentDataCollection = new StudentDataCollection(studentData);
         this.destination = destination;
@@ -21,8 +56,10 @@ public class FileRenamer {
         fileNameHandler = new FileNameHandler();
     }
 
-    
-    /** 
+    /**
+     * This method renames all the files in the destination folder and returns the
+     * number of renamed files
+     * 
      * @return int
      */
     public int renameFiles() {
@@ -86,16 +123,18 @@ public class FileRenamer {
         return count;
     }
 
-    
-    /** 
+    /**
+     * This method sets the renaming strategy to be used
+     * 
      * @param strategy
      */
     private void setStrategy(RenamingStrategy strategy) {
         this.strategy = strategy;
     }
 
-    
-    /** 
+    /**
+     * This method gets the new file name of a file
+     * 
      * @param fileName
      * @param student
      * @param fileNameType
@@ -116,8 +155,9 @@ public class FileRenamer {
         return newFileName;
     }
 
-    
-    /** 
+    /**
+     * This method returns the number of flagged files
+     * 
      * @return int
      */
     public int getNumFlaggedFiles() {

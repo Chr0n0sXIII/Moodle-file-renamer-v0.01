@@ -3,7 +3,8 @@ package comp3607_group_14;
 import java.util.ArrayList;
 
 /**
- * This class creates an ArrayList of StudentData objects
+ * This class stores an ArrayList of StudentData objects and uses an iterator to
+ * traverse it
  */
 public class StudentDataCollection implements Aggregate {
 
@@ -13,15 +14,15 @@ public class StudentDataCollection implements Aggregate {
     private ArrayList<StudentData> studentData;
 
     /**
-     * This contructor creates an ArrayList of StudentData Objects
+     * This contructor instantiates a StudentDataCollection object
      */
     public StudentDataCollection(ArrayList<StudentData> studentData) {
         this.studentData = studentData;
     }
 
-    
-    /** 
+    /**
      * This function creates and returns an Iterator object
+     * 
      * @return Iterator
      */
     public Iterator createIterator() {
@@ -31,14 +32,19 @@ public class StudentDataCollection implements Aggregate {
         return iterator;
     }
 
-
     /**
-     *This class
+     * This class is the iterator element of the iterator design pattern
      */
     private class ListIterator implements Iterator {
 
+        /**
+         * This variable stores the current position of traversal in the collection
+         */
         private int currentPosition = 0;
 
+        /**
+         * This method returns true if a collection has a next object
+         */
         public boolean hasNext() {
 
             if (currentPosition < studentData.size())
@@ -47,6 +53,9 @@ public class StudentDataCollection implements Aggregate {
                 return false;
         }
 
+        /**
+         * This method returns the next object in a collection
+         */
         public Object next() {
             if (this.hasNext()) {
 
@@ -58,6 +67,9 @@ public class StudentDataCollection implements Aggregate {
 
         }
 
+        /**
+         * This method resets the traversal of a collection
+         */
         public void reset() {
             currentPosition = 0;
         }

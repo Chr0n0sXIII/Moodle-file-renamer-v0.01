@@ -9,12 +9,29 @@ import java.util.stream.Stream;
 import java.io.File;
 import java.io.FileFilter;
 
+/**
+ * This class is responsible for copying files form a directory to another
+ */
 public class FileCopier {
 
+    /**
+     * This variable stores the file path of the files to be renamed folder
+     */
     private String source;
+
+    /**
+     * This variable stores the file path of the renamed assignment files
+     */
     private String destination;
+
+    /**
+     * This variable is used to filter certain files while copying
+     */
     private FileFilter filter;
 
+    /**
+     * This method instantiates a FileCopier object
+     */
     public FileCopier(String source, String destination) {
         this.destination = destination;
         this.source = source;
@@ -31,8 +48,9 @@ public class FileCopier {
         };
     }
 
-    
-    /** 
+    /**
+     * This method copies files from the source to the destination
+     * 
      * @throws IOException
      */
     public void copyFiles() throws IOException {

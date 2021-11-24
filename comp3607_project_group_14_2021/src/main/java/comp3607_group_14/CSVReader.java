@@ -6,20 +6,40 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * This class is responsible for reading all the data of a CSV file and storing
+ * that information
+ */
 public class CSVReader {
 
+    /**
+     * This variable stores the file path of the renamed assignment files
+     */
     private String source;
+
+    /**
+     * This variable stores the name of a CSV file
+     */
     private String CSVName;
+
+    /**
+     * This variable stores an arraylist of studentData
+     */
     private ArrayList<StudentData> studentData;
 
+    /**
+     * This constructor initiates a CSVReader object
+     */
     public CSVReader(String source, String CSVName) {
         this.source = source;
         this.CSVName = CSVName;
         studentData = new ArrayList<StudentData>();
     }
 
-    
-    /** 
+    /**
+     * This method stores all the information on students in an StudentData
+     * Arraylist
+     * 
      * @return boolean
      */
     public boolean readCSV() {
@@ -45,8 +65,9 @@ public class CSVReader {
         return false;
     }
 
-    
-    /** 
+    /**
+     * This method returns an arraylist with all the student's data
+     * 
      * @return ArrayList
      */
     public ArrayList<StudentData> getStudentData() {
