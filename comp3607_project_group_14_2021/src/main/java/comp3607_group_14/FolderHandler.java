@@ -56,7 +56,7 @@ public class FolderHandler {
 
     /**
      * @param location
-     * @return ArrayList<String>
+     * @return ArrayList
      */
     public ArrayList<String> getFileNames(String location) {
 
