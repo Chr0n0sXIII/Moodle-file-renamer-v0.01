@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 /**
- * This class
+ * This class is responsible for renaming files according to the defined naming convention
  */
 public class FileRenamer {
 
